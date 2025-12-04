@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>徐薇薇 - 個人簡歷</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="profile-photo">
+            <img src="images/profile.jpg" alt="徐薇薇的大頭照">
+        </div>
+        <h1 class="name">徐薇薇</h1>
+        <p class="tagline">Make the best use of what is in your power, and take the rest as it happens.</p>
+        <nav class="nav-menu">
+            <a href="#about"><i class="fas fa-user"></i> 關於我</a>
+            <a href="#experience"><i class="fas fa-briefcase"></i> 經歷</a>
+            <a href="#skills"><i class="fas fa-code"></i> 技能</a>
+            <a href="#portfolio"><i class="fas fa-project-diagram"></i> 作品集</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="card">
+            <h2>關於我</h2>
+            <p>國高中畢業於女中，參與多領域學習，現專於學習程式編寫</p>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> Email: vivihsu070717@gmail.com</p>
+                <p><i class="fas fa-phone"></i> 電話: 0984286095</p>
+                <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/414570150/my-portfolio.git" target="_blank">414570150</a></p>
+            </div>
+        </section>
+
+        <section id="experience" class="card">
+            <h2>工作與學習經歷</h2>
+            <div class="timeline">
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2019.9~2022.6</div>
+                    <div class="timeline-content">
+                        <h3> 國中 - 崇光女中</h3>
+                        <p>主要成就與職責：</p>
+                        <ul>
+                            <li>擔任幹部，如班長、風紀等，表現優異獲得導師肯定</li>
+                            <li>考取理想高中</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2022.9~2025.6</div>
+                    <div class="timeline-content">
+                        <h3>高中 - 景美女中</h3>
+                        <p>主要成就與職責：</p>
+                        <ul>
+                            <li>學習程式編寫、西班牙語考取證照等嘗試了多方面技能</li>
+                            <li>參加多項與校外國際交流活動</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2026~ </div>
+                    <div class="timeline-content">
+                        <h3>大學 - 輔仁大學</h3>
+                        <p>主要成就與職責：</p>
+                        <ul>
+                            <li>準時上課及作業繳交</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+<section id="skills" class="card">
+            <h2>我的技能 (B 版：標籤雲)</h2>
+            <div class="skills-tags">
+                <span class="tag tag-low">HTML5</span>
+                <span class="tag tag-low">CSS3</span>
+                <span class="tag tag-mid">JavaScript (ES6+)</span>
+                <span class="tag tag-mid">Git</span>
+                <span class="tag tag-high">Python</span>
+                <span class="tag tag-high">Spanish</span>
+            </div>
+        </section>
+
+        <section id="portfolio" class="card">
+            <h2>作品集</h2>
+            <p>（此處將在步驟 4 填入內容）</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 徐薇薇. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+

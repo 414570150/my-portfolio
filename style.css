@@ -1,0 +1,234 @@
+/* 基礎重置與字體 */
+:root {
+    --primary-color: #3498db; /* 藍色 */
+    --secondary-color: #2ecc71; /* 綠色 */
+    --text-color: #333;
+    --bg-color: #f4f4f9;
+    --card-bg: #fff;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+/* 標頭 (Header) 樣式 */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.profile-photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid white;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.name {
+    margin-bottom: 5px;
+}
+
+.tagline {
+    font-style: italic;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 5px 0;
+    transition: color 0.3s;
+    font-weight: bold;
+}
+
+.nav-menu a:hover {
+    color: var(--secondary-color);
+}
+
+/* 主要內容 (Main) 樣式 */
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: grid;
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.card h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* 關於我區塊 */
+.contact-info {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px dashed #ddd;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.contact-info a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* 經歷時間軸樣式 */
+.timeline {
+    border-left: 3px solid var(--secondary-color);
+    padding-left: 20px;
+    position: relative;
+}
+
+.timeline-item {
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+/* 時間軸標記點 */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -28px;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    border: 3px solid var(--card-bg); /* 使點位於白色卡片上 */
+}
+
+.timeline-date {
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+}
+
+.timeline-content h3 {
+    margin-top: 0;
+    color: var(--text-color);
+}
+
+.timeline-content ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+/* 頁腳 (Footer) 樣式 */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+/* 響應式設計 (RWD) */
+@media (min-width: 768px) {
+    /* 在大螢幕上並排顯示關於我與其他區塊 */
+    main {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 額外的樣式調整，增加網頁設計要求：互動動畫 */
+/* 增加一個卡片懸停效果 */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* 技能區塊 A 版：進度條樣式 */
+.skills-list {
+    margin-top: 15px;
+}
+
+.skill-item p {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.progress-bar {
+    background-color: #eee;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    height: 25px;
+}
+
+.progress-bar div {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: right;
+    padding-right: 10px;
+    line-height: 25px;
+    font-size: 0.9em;
+}
+
+/* 技能區塊 B 版：標籤雲樣式 */
+.skills-tags {
+    margin-top: 15px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: default;
+    transition: background-color 0.3s;
+}
+
+.tag-high {
+    background-color: var(--primary-color);
+    color: white;
+    border: 1px solid var(--primary-color);
+}
+.tag-mid {
+    background-color: #f39c12; /* 橘色 */
+    color: white;
+    border: 1px solid #f39c12;
+}
+.tag-low {
+    background-color: #ccc;
+    color: var(--text-color);
+    border: 1px solid #ccc;
+}
+
+
+.tag:hover {
+    opacity: 0.8;
+}

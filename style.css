@@ -232,3 +232,89 @@ footer {
 .tag:hover {
     opacity: 0.8;
 }
+
+/* --- 專門針對作品集卡片佈局的樣式 --- */
+.section-description {
+    margin-bottom: 25px;
+    color: #666;
+    font-size: 1.1em;
+}
+
+.portfolio-grid {
+    display: grid;
+    /* 預設是 1 欄，在電腦上至少 2 欄 */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px;
+    padding-top: 10px;
+}
+
+.portfolio-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 100%; /* 確保卡片等高 */
+    display: flex; /* 使用 Flexbox 讓內容垂直對齊 */
+    flex-direction: column;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px); /* 輕微上浮效果 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* 標題和標籤向上對齊 */
+    margin-bottom: 10px;
+}
+
+.project-image {
+    width: 100%; /* 圖片寬度填滿卡片 */
+    height: auto;
+    max-height: 180px; /* 限制圖片高度 */
+    object-fit: cover; /* 確保圖片不變形 */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.portfolio-item h3 {
+    color: var(--primary-color);
+    margin: 0;
+    font-size: 1.3em;
+    padding-right: 10px; /* 避免和標籤太靠近 */
+}
+
+.role-tag {
+    background-color: #e0f7fa;
+    color: #00bcd4;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.85em;
+    font-weight: bold;
+    flex-shrink: 0; /* 防止標籤被壓縮 */
+}
+
+.project-details {
+    margin-top: auto; /* 將這部分推到底部 */
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    font-size: 0.95em;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 15px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.project-link:hover {
+    background-color: #007bb5;
+}
